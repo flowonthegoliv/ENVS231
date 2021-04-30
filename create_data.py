@@ -1,4 +1,4 @@
-def make_data(student_id)
+def make_data(student_id):
   from random import seed
   from random import random
   seed(student_id)
