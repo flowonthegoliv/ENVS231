@@ -10,9 +10,10 @@ def make_data(student_id)
   n = np.int(n);
   number = np.zeros((n,1))
   data = np.zeros((samples,np.int(height/step)))
-  r = (np.linspace(0.0001,1,50)**0.143)
-  s = np.linspace(0.1,1,50)
+  r = (np.linspace(0.0001,1,np.int(height/step))**0.143)
+  s = np.linspace(0.1,1,np.int(height/step))
   base = 25;
+
   for i in range(0,np.int(height/step)):
     a = np.zeros((samples,40))
     for j in range(0,40):
@@ -25,5 +26,6 @@ def make_data(student_id)
       a[:,j] =  np.sin(np.resize(np.linspace(0,2*np.pi,add),samples));
     base = base + 5 
     x = np.sum(a[:,:],1) ;
-    data[:,i] = (5*r[i] + x*s[i]);
+    data[:,i] = r[i] + x*s[i]
+  data = data + 3 + (10*random())/2
 
