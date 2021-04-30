@@ -1,4 +1,5 @@
 def make_data(student_id):
+  data = []
   from random import seed
   from random import random
   seed(student_id)
