@@ -27,5 +27,5 @@ def make_data(student_id):
     base = base + 5 
     x = np.sum(a[:,:],1) ;
     data[:,i] = r[i] + x*s[i]
-  data = data + 3 + (10*random())/2
+  data = data + 3 + (10*random())/2;
 
